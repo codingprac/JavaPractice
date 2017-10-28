@@ -1,0 +1,11 @@
+.classpath
+.project
+/target
+/resources
+/build
+/.settings
+.externalToolBuilders
+.git
+.svn
+*.log
+/bin
