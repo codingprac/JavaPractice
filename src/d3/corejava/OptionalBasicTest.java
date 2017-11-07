@@ -2,7 +2,13 @@ import java.util.Optional;
 
 /**
  * Created by deep.lotia on 07-11-2017.
+ * 
+ * Optional seems to be a better way of handling null checks and provide pretty printing like "Optional.empty" instead of "null"
+ *
+ * It provide some methods through which you can nicely develop the code like isPresent(), ifPresent(), map(), orElse(), orElseGet(), orElseThrow()
+ * 
  */
+
 public class MainTest {
 
     int id;
@@ -24,9 +30,15 @@ public class MainTest {
         m2.name = "Deep";
         System.out.println(m2.id);
         System.out.println(m2.name);
-        //m2 = null;
-        System.out.println(m2.department);
-        System.out.println(Optional.ofNullable(m2.department));
+        m2 = null;
+       
+        //NPE Scenario
+        System.out.println(m2.department); // will give NPE as trying to access a field for null reference
+        System.out.println(Optional.ofNullable(m2.department)); // will give NPE as trying to access a field for null reference
+        
+        //Either Prints Null or Optinal.empty
+        System.out.println(m2); // will print null
+        System.out.println(Optional.ofNullable(m2)); // will print Optional.empty
 
         m2.testSomeValue();
     }
