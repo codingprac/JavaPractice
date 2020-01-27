@@ -1,16 +1,13 @@
-package d3.prac.interviewPrepKit;
+package d3.hackerRank.interviewPrepKit.warmUpChallenges;
 
 import java.io.IOException;
 import java.util.Scanner;
 
-public class 2DArrays {
-
-
+public class Arrays2D {
 
     // Complete the hourglassSum function below.
     static int hourglassSum(int[][] arr) {
-
-
+        return 1;
     }
 
     private static final Scanner scanner = new Scanner(System.in);

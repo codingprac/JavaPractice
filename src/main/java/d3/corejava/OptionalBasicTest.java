@@ -1,3 +1,5 @@
+package d3.corejava;
+
 import java.util.Optional;
 
 /**
@@ -9,7 +11,7 @@ import java.util.Optional;
  * 
  */
 
-public class MainTest {
+public class OptionalBasicTest {
 
     int id;
     String name;
@@ -17,7 +19,7 @@ public class MainTest {
 
     public static void main(String args[]) {
 
-        Optional<MainTest> m = Optional.of(new MainTest());
+        Optional<OptionalBasicTest> m = Optional.of(new OptionalBasicTest());
         m.get().id = 1;
         m.get().name = "Deep";
         System.out.println(m.get().id);
@@ -25,7 +27,7 @@ public class MainTest {
         //m = null;
         System.out.println(Optional.ofNullable(m.get()));
 
-        MainTest m2 = new MainTest();
+        OptionalBasicTest m2 = new OptionalBasicTest();
         m2.id = 1;
         m2.name = "Deep";
         System.out.println(m2.id);
