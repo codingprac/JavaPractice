@@ -1,12 +1,11 @@
 package d3.hackerRank.days30;
 
-import java.io.*;
 import java.util.*;
 
-public class ClassVsInstanceD4 {
+public class D4ClassVsInstance {
     private int age;
 
-    public ClassVsInstanceD4(int initialAge) {
+    public D4ClassVsInstance(int initialAge) {
         if (initialAge < 0) {
             System.out.println("Age is not valid, setting age to 0.");
             age = 0;
@@ -36,7 +35,7 @@ public class ClassVsInstanceD4 {
         int T = sc.nextInt();
         for (int i = 0; i < T; i++) {
             int age = sc.nextInt();
-            ClassVsInstanceD4 p = new ClassVsInstanceD4(age);
+            D4ClassVsInstance p = new D4ClassVsInstance(age);
             p.amIOld();
             for (int j = 0; j < 3; j++) {
                 p.yearPasses();

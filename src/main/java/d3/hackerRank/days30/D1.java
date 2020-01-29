@@ -3,7 +3,7 @@ package d3.hackerRank.days30;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
-public class Day1 {
+public class D1 {
 
 	public static void main(String[] args) {
 
