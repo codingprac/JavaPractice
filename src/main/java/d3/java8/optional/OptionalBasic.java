@@ -1,4 +1,4 @@
-package d3.corejava;
+package d3.java8.optional;
 
 import java.util.Optional;
 
@@ -11,7 +11,7 @@ import java.util.Optional;
  * 
  */
 
-public class OptionalBasicTest {
+public class OptionalBasic {
 
     int id;
     String name;
@@ -19,20 +19,20 @@ public class OptionalBasicTest {
 
     public static void main(String args[]) {
 
-        Optional<OptionalBasicTest> m = Optional.of(new OptionalBasicTest());
+        Optional<OptionalBasic> m = Optional.of(new OptionalBasic());
         m.get().id = 1;
         m.get().name = "Deep";
         System.out.println(m.get().id);
         System.out.println(m.get().name);
         //m = null;
-        System.out.println(Optional.ofNullable(m.get()));
+        System.out.println("m value: "+Optional.ofNullable(m.get()));
 
-        OptionalBasicTest m2 = new OptionalBasicTest();
-        m2.id = 1;
-        m2.name = "Deep";
+        OptionalBasic m2 = new OptionalBasic();
+        m2.id = 2;
+        m2.name = "Sayali";
         System.out.println(m2.id);
         System.out.println(m2.name);
-        m2 = null;
+        //m2 = null; // uncomment this line and it will give NPE at line 38 and 39
        
         //NPE Scenario
         System.out.println(m2.department); // will give NPE as trying to access a field for null reference
