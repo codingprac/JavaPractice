@@ -1,4 +1,4 @@
-package com.d3.prac.interviewPrepKit;
+package d3.hackerRank.interviewPrepKit.warmupchallenges;
 
 import java.util.Scanner;
 

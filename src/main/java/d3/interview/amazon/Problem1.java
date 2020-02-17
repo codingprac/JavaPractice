@@ -1,6 +1,5 @@
-package d3.amazon;
+package d3.interview.amazon;
 
-import javax.swing.*;
 import java.util.HashMap;
 import java.util.Map;
 

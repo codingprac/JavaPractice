@@ -1,4 +1,4 @@
-package com.company;
+package d3.hackerRank.interviewPrepKit.warmupchallenges;
 
 import java.io.IOException;
 import java.util.HashMap;
