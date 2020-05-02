@@ -1,6 +1,8 @@
 package d3.hackerRank.days30;
 
+import java.util.Arrays;
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class D25Prime {
 
