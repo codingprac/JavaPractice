@@ -14,7 +14,7 @@ public class StreamsBasic {
         Stream<String> stream = Stream.of("aaa","bbbb","aaaa", "ccc", "abc");
         List<String> filtered = stream.filter(s -> s.contains("a")).collect(Collectors.toList()); // stream used once.
 
-        //System.out.println("stream count = " + stream.distinct().count()); // same stream cannot be reused and it will give IAE exception.
+        //System.out.println("stream count = " + stream.distinct().count()); // same stream cannot be reused and it will give ISE exception.
         System.out.println("filtered stream count = " + filtered.stream().distinct().count());
 
         //Supplier Streams

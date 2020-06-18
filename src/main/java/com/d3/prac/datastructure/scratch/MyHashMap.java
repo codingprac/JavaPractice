@@ -1,6 +1,8 @@
 package com.d3.prac.datastructure.scratch;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class MyHashMap<K, V> {
 
@@ -12,16 +14,23 @@ public class MyHashMap<K, V> {
     // TODO : put, get, remove, values, keySet, entrySet
 
     public void put(K key, V value) {
+        ensureCapacity();
         int index = hash(key) & (values.length - 1);
-
         if(values[index] == null) {
-            ensureCapacity();
             values[index] = new Node<>(key, value, null);
             size++;
         } else if(values[index].getKey() == key) {
             values[index].setValue(value);
         } else {
-            values[index].next = new Node<>(key, value, null);
+            Node<K,V> node = values[index].next;
+            if(node != null) {
+                while(node.next != null) {
+                    node = node.next;
+                }
+                node.next = new Node<>(key, value, null);
+            } else {
+                values[index].next = new Node<>(key, value, null);
+            }
             size++;
         }
     }
@@ -31,7 +40,7 @@ public class MyHashMap<K, V> {
 
         if(values[index].getValue() != null) {
             Node<K, V> node = values[index];
-            if(node.getKey() == key) {
+            if(node.getKey().equals(key)) {
                 return node.getValue();
             } else if(node.next != null) {
                 while(node.next !=null ) {

@@ -1,4 +1,4 @@
-package com.d3.prac.datastructure;
+package com.d3.prac.datastructure.scratch;
 
 public class LinkedListTest {
 	  
