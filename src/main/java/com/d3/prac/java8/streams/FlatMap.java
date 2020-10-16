@@ -23,13 +23,14 @@ public class FlatMap {
         List<Integer> streamInt = users
                                         .stream()
                                         .flatMap(user -> user.getAddress().getPinCodes().stream())
+                                        .sorted()
                                         .collect(Collectors.toList());
 
         Stream<Address> streamAddress = users.stream().map(user -> user.getAddress());
 
-        Collections.sort(streamInt, (o1, o2) -> o1>o2 ? 1 : o1 < o2 ? -1 : 0);
+        //Collections.sort(streamInt, (o1, o2) -> o1>o2 ? 1 : o1 < o2 ? -1 : 0);
 
-        streamInt.forEach(System.out::println);
+        streamInt.forEach(System.out::print);
         streamAddress.forEach(System.out::println);
     }
 }

@@ -22,7 +22,7 @@ public class StreamsBasic {
         Supplier<Stream<String>> streamSupplier = () -> stream2;
         List<String> filtered2 = streamSupplier.get().filter(s -> s.contains("a")).collect(Collectors.toList()); // stream used once.
 
-        System.out.println("supplier stream count = " + streamSupplier.get().distinct().count()); // This will work
+        //System.out.println("supplier stream count = " + streamSupplier.get().distinct().count()); // This will work
         System.out.println("filtered2 stream count = " + filtered2.stream().distinct().count());
 
         Stream<String> partStream = Arrays.stream(new String[]{"1", "2", "3", "4", "5"}, 1, 5);

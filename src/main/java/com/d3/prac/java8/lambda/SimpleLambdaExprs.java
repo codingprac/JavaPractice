@@ -1,6 +1,7 @@
 package com.d3.prac.java8.lambda;
 
 import java.util.Comparator;
+import java.util.Objects;
 import java.util.TreeSet;
 
 
@@ -26,16 +27,23 @@ public class SimpleLambdaExprs {
         LambdaExprEmpty empty = () -> System.out.println("Deep");
         empty.execute();
 
-        LambdaExprOneParameter oneParameter = (str) -> System.out.println(str);
+        LambdaExprOneParameter oneParameter = str -> System.out.println(str);
         oneParameter.execute("Hello");
 
         LambdaExprTwoParameter twoParameter = (str, perc) -> System.out.println(str + perc);
         twoParameter.execute("good", 20);
 
-        BasicMaths add = (x, y) -> x+y;
-        BasicMaths multiply = (x,y) -> x*y;
-        BasicMaths divide = (x,y) -> y!=0 ? x/y : 0;
-        BasicMaths substract = (x,y) -> x-y;
+        BasicMaths add = (x, y) -> x + y;
+        BasicMaths multiply = (x, y) -> x * y;
+        BasicMaths divide = (x, y) -> y != 0 ? x / y : 0;
+
+        BasicMaths divide2 = (x, y) -> { return y != 0 ? x / y : 0; };
+
+        BasicMaths divide3 = (int x, int y) -> {
+            System.out.println();
+            return y != 0 ? x / y : 0;
+        };
+        BasicMaths substract = (x, y) -> x - y;
 
         System.out.println("substract = " + add.operate(10, 5));
         System.out.println("multiply = " + multiply.operate(10, 5));
@@ -51,5 +59,9 @@ public class SimpleLambdaExprs {
         h.add(5);
         System.out.println("Elements of the TreeSet after" +
                 " sorting are: " + h);
+
+        Objects.requireNonNull(h, () -> "Error");
+
     }
+
 }

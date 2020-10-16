@@ -11,11 +11,18 @@ jar {
     true
 }
 
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
 test {
     useJUnitPlatform()
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+
+    compileOnly 'org.projectlombok:lombok:1.18.14'
+    annotationProcessor 'org.projectlombok:lombok:1.18.14'
+
+    testImplementation 'junit:junit:4.13'
+    testRuntimeOnly 'junit:junit:4.13'
 }
