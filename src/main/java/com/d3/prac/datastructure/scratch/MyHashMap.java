@@ -4,6 +4,13 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ *
+ * Some Useful Resources:
+ * https://stackoverflow.com/questions/2334218/why-are-xor-often-used-in-java-hashcode-but-another-bitwise-operators-are-used
+ * https://www.nagarro.com/en/blog/post/24/performance-improvement-for-hashmap-in-java-8
+ * https://stackoverflow.com/questions/9335169/understanding-strange-java-hash-function
+ */
 public class MyHashMap<K, V> {
 
     private static int size;
